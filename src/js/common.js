@@ -3,7 +3,7 @@ $(document).ready( function() {
 	function winHeight() {
 		$( '#scene' ).css("height", $( window ).height());
 	}
-	winHeight()
+	winHeight();
 	$( window ).resize(function() {
 		winHeight();
 		
@@ -11,4 +11,5 @@ $(document).ready( function() {
 
 	var scene = document.getElementById('scene');
 	var parallax = new Parallax(scene);
+	
 });

@@ -31,9 +31,9 @@ gulp.task('icons', function() {
 gulp.task('scripts', ['bootstrap'],  function() {
 	return gulp.src([
 			'src/libs/jquery/dist/jquery.min.js',
-			'src/libs/parallax/parallax.min.js',
+			'src/libs/parallax/parallax.min.js',	
 			'src/libs/bootstrap/es5/popper.js',
-			'src/libs/bootstrap/es5/bootstrap.js'			
+			'src/libs/bootstrap/es5/bootstrap.js'
 		
 		])
 	.pipe(plumber())
@@ -45,8 +45,8 @@ gulp.task('scripts', ['bootstrap'],  function() {
 
 gulp.task('bootstrap', function() {
 	return gulp.src([
-		'src/libs/bootstrap/dist/js/bootstrap.js',
-		'src/libs/popper.js/dist/popper.js'
+		'src/libs/popper.js/dist/popper.js',
+		'src/libs/bootstrap/dist/js/bootstrap.js'		
 		])
 	.pipe(plumber())
 	.pipe(babel({ presets: ['env'] }))
