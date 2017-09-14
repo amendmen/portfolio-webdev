@@ -7,6 +7,10 @@ body {
   position: relative;
   z-index: 100; }
 
+section {
+  position: relative;
+  overflow: hidden; }
+
 #scene {
   overflow: hidden;
   width: 100%; }
@@ -20,3 +24,36 @@ body {
   text-align: center; }
   .title h2, .title h6 {
     text-transform: uppercase; }
+
+#about .bio,
+#about .title {
+  position: relative;
+  z-index: 150; }
+
+#about .bio {
+  font-size: 18px;
+  color: #fff; }
+
+.wrapp-l {
+  position: absolute;
+  background-color: #006899;
+  opacity: 0.8;
+  width: 30%;
+  height: 100%;
+  z-index: 100; }
+  .wrapp-l::before, .wrapp-l::after {
+    position: relative;
+    content: ' ';
+    display: block;
+    height: 150%;
+    width: 105%;
+    left: 60%;
+    top: -50%;
+    background-color: #006899;
+    -webkit-transform: rotate(20deg);
+        -ms-transform: rotate(20deg);
+            transform: rotate(20deg); }
+  .wrapp-l::after {
+    width: 50%;
+    left: 200%;
+    top: -180%; }
