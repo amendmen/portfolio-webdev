@@ -42,24 +42,22 @@ section
 .wrapp-l
 	position: absolute
 	background-color: $blue
+	top: -80%
+	left: -30%
 	opacity: 0.8
-	width: 30%
-	height: 100%
+	width: 70%
+	height: 250%
 	z-index: 100
-	&::before,
-	&::after
+	transform: rotate(20deg)
+	&::before
 		position: relative
 		content: ' '
 		display: block
-		height: 150%
-		width: 105%
-		left: 60%
-		top: -50%
+		height: 250%
+		width: 25%
+		left: 130%
+		top: -100%
 		background-color: $blue
-		transform: rotate(20deg)
-	&::after
-		width: 50%
-		left: 200%
-		top: -180%
-
+		
+	
 

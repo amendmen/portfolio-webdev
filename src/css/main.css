@@ -37,23 +37,21 @@ section {
 .wrapp-l {
   position: absolute;
   background-color: #006899;
+  top: -80%;
+  left: -30%;
   opacity: 0.8;
-  width: 30%;
-  height: 100%;
-  z-index: 100; }
-  .wrapp-l::before, .wrapp-l::after {
+  width: 70%;
+  height: 250%;
+  z-index: 100;
+  -webkit-transform: rotate(20deg);
+      -ms-transform: rotate(20deg);
+          transform: rotate(20deg); }
+  .wrapp-l::before {
     position: relative;
     content: ' ';
     display: block;
-    height: 150%;
-    width: 105%;
-    left: 60%;
-    top: -50%;
-    background-color: #006899;
-    -webkit-transform: rotate(20deg);
-        -ms-transform: rotate(20deg);
-            transform: rotate(20deg); }
-  .wrapp-l::after {
-    width: 50%;
-    left: 200%;
-    top: -180%; }
+    height: 250%;
+    width: 25%;
+    left: 130%;
+    top: -100%;
+    background-color: #006899; }
