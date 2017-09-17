@@ -1,0 +1,101 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "typeit",
+        "scope": null,
+        "escapedName": "typeit",
+        "name": "typeit",
+        "rawSpec": "",
+        "spec": "latest",
+        "type": "tag"
+      },
+      "E:\\amendment\\portfolio\\portfolio-webdev"
+    ]
+  ],
+  "_from": "typeit@latest",
+  "_id": "typeit@4.4.1",
+  "_inCache": true,
+  "_location": "/typeit",
+  "_nodeVersion": "8.4.0",
+  "_npmOperationalInternal": {
+    "host": "s3://npm-registry-packages",
+    "tmp": "tmp/typeit-4.4.1.tgz_1504734202789_0.6471767816692591"
+  },
+  "_npmUser": {
+    "name": "alexmacarthur",
+    "email": "alex@macarthur.me"
+  },
+  "_npmVersion": "5.4.0",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "typeit",
+    "scope": null,
+    "escapedName": "typeit",
+    "name": "typeit",
+    "rawSpec": "",
+    "spec": "latest",
+    "type": "tag"
+  },
+  "_requiredBy": [
+    "#USER"
+  ],
+  "_resolved": "https://registry.npmjs.org/typeit/-/typeit-4.4.1.tgz",
+  "_shasum": "6c0852898f8caa045bde65099f34ed5cc083ad43",
+  "_shrinkwrap": null,
+  "_spec": "typeit",
+  "_where": "E:\\amendment\\portfolio\\portfolio-webdev",
+  "author": {
+    "name": "Alex MacArthur",
+    "email": "alex@macarthur.me"
+  },
+  "bugs": {
+    "url": "https://github.com/alexmacarthur/typeit/issues"
+  },
+  "dependencies": {
+    "jquery": "^1.8.0"
+  },
+  "description": "The most versatile jQuery animated typing plugin on the planet.",
+  "devDependencies": {
+    "browser-sync": "^2.9.11",
+    "gulp": "^3.8.11",
+    "gulp-autoprefixer": "^3.0.2",
+    "gulp-jshint": "^1.9.2",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.0.4",
+    "gulp-uglify": "^1.1.0"
+  },
+  "directories": {},
+  "dist": {
+    "integrity": "sha512-VAoWunrxWy0aETU04pC0YrSrzZCRw5my0szWwnucYwq19PubnidzdElM0J9l6EYJxXG/loP6+jQnL9Ap8C8Vag==",
+    "shasum": "6c0852898f8caa045bde65099f34ed5cc083ad43",
+    "tarball": "https://registry.npmjs.org/typeit/-/typeit-4.4.1.tgz"
+  },
+  "gitHead": "a62bcfd46580f94edaa0a89d401e8232fc1f227e",
+  "homepage": "https://github.com/alexmacarthur/typeit#readme",
+  "keywords": [
+    "jquery",
+    "animated",
+    "typing",
+    "typewriter",
+    "typewriter effect",
+    "type effect",
+    "text effects"
+  ],
+  "license": "GPL-2.0",
+  "main": "dist/typeit.min.js",
+  "maintainers": [
+    {
+      "name": "alexmacarthur",
+      "email": "alex@macarthur.me"
+    }
+  ],
+  "name": "typeit",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alexmacarthur/typeit.git"
+  },
+  "version": "4.4.1"
+}

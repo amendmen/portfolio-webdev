@@ -1,11 +1,22 @@
+@font-face {
+  font-family: 'Montserrat';
+  src: url("../fonts/Montserrat/Montserrat-Regular.ttf") format("ttf"); }
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url("../fonts/Montserrat/Montserrat-Bold.ttf") format("ttf");
+  font-weight: bold; }
+
 body {
   margin: 0;
   padding: 0;
   font-size: 14px;
+  font-family: 'Montserrat', sans-serif;
   overflow-y: scroll;
   min-width: 320px;
   position: relative;
-  z-index: 100; }
+  z-index: 100;
+  background-color: #FFF; }
 
 section {
   position: relative;
@@ -17,10 +28,13 @@ section {
   #scene img {
     position: relative;
     left: -10%;
+    width: 120%;
     -webkit-background-size: cover;
             background-size: cover; }
 
 .title {
+  margin-top: 50px;
+  margin-bottom: 50px;
   text-align: center; }
   .title h2, .title h6 {
     text-transform: uppercase; }
@@ -28,30 +42,74 @@ section {
 #about .bio,
 #about .title {
   position: relative;
-  z-index: 150; }
-
-#about .bio {
-  font-size: 18px;
+  z-index: 150;
   color: #fff; }
 
-.wrapp-l {
+#about .bio {
+  font-size: 25px;
+  text-shadow: 1px 1px red;
+  color: #fff;
+  margin-bottom: 50px; }
+
+.wrapp-bio {
   position: absolute;
-  background-color: #006899;
-  top: -80%;
-  left: -30%;
-  opacity: 0.8;
-  width: 70%;
+  background-color: black;
+  top: -100%;
+  left: -50%;
+  opacity: 0.6;
+  width: 100%;
   height: 250%;
-  z-index: 100;
-  -webkit-transform: rotate(20deg);
-      -ms-transform: rotate(20deg);
-          transform: rotate(20deg); }
-  .wrapp-l::before {
+  z-index: 130;
+  -webkit-transform: rotate(-20deg);
+      -ms-transform: rotate(-20deg);
+          transform: rotate(-20deg);
+  -webkit-transition: left, 10s;
+  -o-transition: left, 10s;
+  transition: left, 10s; }
+  .wrapp-bio::before {
+    position: absolute;
+    content: ' ';
+    display: block;
+    height: 250%;
+    width: 1%;
+    left: 100%;
+    top: -100%;
+    background-color: #ff5c05;
+    z-index: 121;
+    -webkit-box-shadow: 0 0 10px 10px black;
+            box-shadow: 0 0 10px 10px black;
+    -webkit-transition: all, 3s;
+    -o-transition: all, 3s;
+    transition: all, 3s;
+    -webkit-transition-delay: 2s;
+         -o-transition-delay: 2s;
+            transition-delay: 2s; }
+  .wrapp-bio::after {
     position: relative;
     content: ' ';
     display: block;
     height: 250%;
-    width: 25%;
-    left: 130%;
+    width: 150%;
+    left: 101%;
     top: -100%;
-    background-color: #006899; }
+    background-color: #8c0404;
+    z-index: 120;
+    -webkit-transition: left, 10s;
+    -o-transition: left, 10s;
+    transition: left, 10s; }
+
+.bio-animate {
+  left: -70%;
+  -webkit-transform: rotate(20deg);
+      -ms-transform: rotate(20deg);
+          transform: rotate(20deg);
+  text-align: center;
+  text-transform: uppercase;
+  color: #2600ff; }
+  .bio-animate::before {
+    width: 10%;
+    -webkit-transition-delay: 7s;
+         -o-transition-delay: 7s;
+            transition-delay: 7s; }
+  .bio-animate h1 {
+    margin: 30px 0 30px 0; }

@@ -25,15 +25,17 @@ gulp.task('sass', function() {
 //fonts
 gulp.task('icons', function() {
     return gulp.src('src/libs/font-awesome/fonts/**.*')
-        .pipe(gulp.dest('src/fonts/'));
+        .pipe(gulp.dest('src/fonts/font-awesome/'));
 });
 
 gulp.task('scripts', ['bootstrap'],  function() {
 	return gulp.src([
 			'src/libs/jquery/dist/jquery.min.js',
-			'src/libs/parallax/parallax.min.js',	
+			'src/libs/parallax/parallax.min.js',
+			'src/libs/typeit/dist/typeit.min.js',	
 			'src/libs/bootstrap/es5/popper.js',
 			'src/libs/bootstrap/es5/bootstrap.js'
+			
 		
 		])
 	.pipe(plumber())
@@ -41,15 +43,16 @@ gulp.task('scripts', ['bootstrap'],  function() {
 	.pipe(uglify())
 	.pipe(rename({suffix: '.min'}))
 	.pipe(gulp.dest('src/js/'))
+	.pipe(browserSync.reload({stream: true}));
 });
 
 gulp.task('bootstrap', function() {
 	return gulp.src([
-		'src/libs/popper.js/dist/popper.js',
+		'src/libs/popper/dist/popper.js',
 		'src/libs/bootstrap/dist/js/bootstrap.js'		
 		])
 	.pipe(plumber())
-	.pipe(babel({ presets: ['env'] }))
+	.pipe(babel({ presets: ['es2015'] }))
 	.pipe(gulp.dest('src/libs/bootstrap/es5/'))
 })
 
