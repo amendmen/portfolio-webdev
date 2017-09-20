@@ -103,3 +103,26 @@ section
 		width: 10%
 	100%
 		width: 10%
+
+
+#skills
+	border-top: 15px solid  darken($blue, 20%)
+	border-bottom: 15px solid  darken($blue, 20%)
+	padding-top: 30px
+	padding-bottom: 30px
+	&::before,
+	&::after
+		position: relative
+		content: ' '
+		display: block
+		width: 100%
+		box-shadow: 0 0 10px 10px black 
+	&::before
+		top: -30px
+	&::after
+		bottom: -30px
+	.item
+		text-align: center
+		img
+			width: auto
+			max-height: 100px

@@ -137,3 +137,25 @@ section {
     width: 10%; }
   100% {
     width: 10%; } }
+
+#skills {
+  border-top: 15px solid #170099;
+  border-bottom: 15px solid #170099;
+  padding-top: 30px;
+  padding-bottom: 30px; }
+  #skills::before, #skills::after {
+    position: relative;
+    content: ' ';
+    display: block;
+    width: 100%;
+    -webkit-box-shadow: 0 0 10px 10px black;
+            box-shadow: 0 0 10px 10px black; }
+  #skills::before {
+    top: -30px; }
+  #skills::after {
+    bottom: -30px; }
+  #skills .item {
+    text-align: center; }
+    #skills .item img {
+      width: auto;
+      max-height: 100px; }
