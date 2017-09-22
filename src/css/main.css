@@ -18,9 +18,70 @@ body {
   z-index: 100;
   background-color: #FFF; }
 
+h1, h2, h3, h4 {
+  text-transform: uppercase; }
+
 section {
   position: relative;
   overflow: hidden; }
+
+p {
+  margin: 0; }
+
+.wrapper {
+  position: absolute;
+  width: 100%;
+  height: 100%; }
+  .wrapper .container,
+  .wrapper .row {
+    height: 100%; }
+
+#center {
+  z-index: 200;
+  border: 1px dashed red; }
+  #center .hello {
+    opacity: 0.8;
+    color: #61ff00;
+    font-weight: 800;
+    font-size: 30px;
+    padding: 0 20px;
+    border-top: 50px solid #000000;
+    border-left: 20px solid transparent;
+    border-right: 30px solid transparent; }
+    #center .hello div {
+      position: relative;
+      top: -50px; }
+  #center .mn-is {
+    position: relative;
+    opacity: 0.8;
+    color: #ff5c05;
+    font-weight: 300;
+    font-size: 30px;
+    padding: 0 20px;
+    border: 2px solid #ff5c05;
+    top: -80px;
+    left: 100px; }
+  #center .name {
+    color: #8c0404;
+    font-size: 60px;
+    font-weight: 800;
+    padding: 0 20px;
+    text-transform: uppercase;
+    border: 4px solid #fff;
+    -webkit-transform: skew(-20deg);
+        -ms-transform: skew(-20deg);
+            transform: skew(-20deg);
+    -webkit-box-shadow: 0 0 100px 1px #000000;
+            box-shadow: 0 0 100px 1px #000000; }
+    #center .name div {
+      -webkit-transform: skew(20deg);
+          -ms-transform: skew(20deg);
+              transform: skew(20deg); }
+  #center .center-descr {
+    width: auto;
+    color: #fff;
+    background-color: #2600ff;
+    font-size: 20px; }
 
 #scene {
   overflow: hidden;
@@ -53,7 +114,7 @@ section {
 
 .wrapp-bio {
   position: absolute;
-  background-color: black;
+  background-color: #000000;
   top: -100%;
   left: -20%;
   opacity: 0.6;
@@ -70,8 +131,8 @@ section {
     top: -50%;
     background-color: #ff5c05;
     z-index: 121;
-    -webkit-box-shadow: 0 0 10px 10px black;
-            box-shadow: 0 0 10px 10px black; }
+    -webkit-box-shadow: 0 0 10px 10px #000000;
+            box-shadow: 0 0 10px 10px #000000; }
   .wrapp-bio::after {
     position: relative;
     content: ' ';
@@ -148,8 +209,8 @@ section {
     content: ' ';
     display: block;
     width: 100%;
-    -webkit-box-shadow: 0 0 10px 10px black;
-            box-shadow: 0 0 10px 10px black; }
+    -webkit-box-shadow: 0 0 10px 10px #000000;
+            box-shadow: 0 0 10px 10px #000000; }
   #skills::before {
     top: -30px; }
   #skills::after {
@@ -159,3 +220,39 @@ section {
     #skills .item img {
       width: auto;
       max-height: 100px; }
+
+footer {
+  background-color: #000000;
+  opacity: 0.8;
+  border-top: 5px solid #ff5c05;
+  -webkit-box-shadow: 0 0 10px 10px #000000;
+          box-shadow: 0 0 10px 10px #000000; }
+  footer hr {
+    border-top: 5px solid #ff5c05;
+    margin: 0;
+    width: 100%; }
+  footer .name h2:first-child {
+    font-weight: 200; }
+  footer .name h2:last-child {
+    font-weight: 600; }
+  footer h2 {
+    color: #fff;
+    float: left;
+    margin: 0; }
+  footer .soc ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-size: 35px; }
+    footer .soc ul li {
+      display: inline;
+      margin-left: 20px; }
+      footer .soc ul li a {
+        color: #ff5c05; }
+  footer .bottom {
+    background-color: #8c0404;
+    padding: 15px;
+    color: #fff;
+    margin-top: 20px; }
+    footer .bottom .col {
+      text-align: center; }

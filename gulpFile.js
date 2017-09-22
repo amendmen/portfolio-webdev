@@ -25,7 +25,7 @@ gulp.task('sass', function() {
 //fonts
 gulp.task('icons', function() {
     return gulp.src('src/libs/font-awesome/fonts/**.*')
-        .pipe(gulp.dest('src/fonts/font-awesome/'));
+        .pipe(gulp.dest('src/fonts/'));
 });
 
 gulp.task('scripts', ['bootstrap'],  function() {

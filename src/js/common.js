@@ -27,7 +27,7 @@ $('.wrapp-bio').removeClass('bio-animate');
 
 	$('#bio').typeIt({
 		autoStart: false,
-		speed: 20
+		speed: 15
 	});
 
 	$( '.title' ).typeIt({
