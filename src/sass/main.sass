@@ -5,6 +5,7 @@ $green: #61ff00
 $red: #8c0404
 $dark: #000000
 
+@import bourbon/bourbon
 @import 'fonts'
 
 body
@@ -33,34 +34,39 @@ p
 	.row
 		height: 100%
 #center
+	display: flex
+	flex-direction: column
+	align-items: baseline
 	z-index: 200
-	border: 1px dashed red
 	.hello
 		opacity: 0.8
+		background-color: $dark
+		z-index: 250
 		color: $green
 		font-weight: 800
+		text-transform: uppercase
 		font-size: 30px
 		padding: 0 20px
-		border-top: 50px solid $dark
-		border-left: 20px solid transparent
-		border-right: 30px solid transparent
-		div
-			position: relative
-			top: -50px
+		position: relative
+		bottom: 40px
 	.mn-is
 		position: relative
-		opacity: 0.8
+		bottom: 70px
+		left: 650px
 		color: $orange
-		font-weight: 300
 		font-size: 30px
 		padding: 0 20px
 		border: 2px solid $orange
-		top: -80px
-		left: 100px
+		z-index: 250
+		line-height: 1
+		box-shadow: 0 0 20px 1px $orange
 	.name	
+		position: relative
+		bottom: 80px
+		font-family: 'MavenPro', sans-serif
 		color: $red
-		font-size: 60px
-		font-weight: 800
+		font-size: 65px
+		font-weight: 900
 		padding: 0 20px
 		text-transform: uppercase
 		border: 4px solid #fff
@@ -69,19 +75,33 @@ p
 		div
 			transform: skew(20deg)
 	.center-descr
-		width: auto
+		padding: 0 20px
+		align-self: center
+		position: relative
+		bottom: 95px
 		color: #fff
-		background-color: $blue
+		//background-color: $blue
 		font-size: 20px
+		box-shadow: 0 0 20px 1px $blue
+		@include linear-gradient(left, lighten($blue, 20%) 1%,  $blue 10%, $blue 90%, lighten($blue, 20%) 100%)
+
+
 #scene
 	overflow: hidden
 	width: 100%
-	img
-		position: relative
-		left: -10%
-		width: 120%
-		background-size: cover
-
+	.layer
+		width: 100%
+		img
+			position: relative
+			left: -10%
+			width: 120%
+	.move-always
+		animation: moving-fog 15s infinite
+@keyframes moving-fog
+	0%
+		transform: translate(30%)
+	100%
+		transform: translate(-110%)
 
 .title
 	margin-top: 50px
@@ -100,6 +120,7 @@ p
 		text-shadow: 1px 1px red//need to style
 		color: #fff
 		margin-bottom: 50px
+		font-family: 'MavenPro', sans-serif
 
 .wrapp-bio
 	position: absolute
@@ -178,10 +199,7 @@ p
 		text-align: center
 		img
 			width: auto
-			max-height: 100px
-
-
-
+			max-height: 80px
 
 
 

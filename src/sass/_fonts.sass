@@ -1,9 +1,6 @@
-@font-face
-	font-family: 'Montserrat'
-	src: url('../fonts/Montserrat/Montserrat-Regular.ttf') format('ttf')
+@include font-face('Montserrat', '/fonts/Montserrat/Montserrat-Regular', regular, $file-formats: ttf)
+@include font-face('Montserrat', '/fonts/Montserrat/Montserrat-Bold', bold, $file-formats: ttf)
 
-@font-face
-	font-family: 'Montserrat'
-	src: url('../fonts/Montserrat/Montserrat-Bold.ttf') format('ttf')
-	font-weight: bold
-
+@include font-face('MavenPro', '/fonts/MavenPro/MavenPro-Regular', regular, $file-formats: ttf)
+@include font-face('MavenPro', '/fonts/MavenPro/MavenPro-Bold', bold, $file-formats: ttf)
+@include font-face('MavenPro', '/fonts/MavenPro/MavenPro-Black', black, $file-formats: ttf)
