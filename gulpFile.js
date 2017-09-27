@@ -32,7 +32,8 @@ gulp.task('scripts', ['bootstrap'],  function() {
 	return gulp.src([
 			'src/libs/jquery/dist/jquery.min.js',
 			'src/libs/parallax/parallax.min.js',
-			'src/libs/typeit/dist/typeit.min.js'	
+			'src/libs/typeit/dist/typeit.min.js',
+			'src/libs/jquery-validation/dist/jquery.validate.min.js'	
 			/*'src/libs/bootstrap/es5/popper.js',
 			'src/libs/bootstrap/es5/bootstrap.js'
 			*/
