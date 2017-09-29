@@ -51,7 +51,7 @@ p
 		bottom: 30px
 	.mn-is
 		position: relative
-		bottom: 60px
+		bottom: 50px
 		left: 650px
 		color: $red
 		font-size: 30px
@@ -62,7 +62,7 @@ p
 		box-shadow: 0 0 20px 1px $red
 	.name	
 		position: relative
-		bottom: 70px
+		bottom: 60px
 		font-family: 'MavenPro', sans-serif
 		color: $orange
 		font-size: 65px
@@ -78,7 +78,7 @@ p
 		padding: 0 20px
 		align-self: center
 		position: relative
-		bottom: 85px
+		bottom: 75px
 		color: #fff
 		font-size: 20px
 		box-shadow: 0 0 20px 1px $dark
@@ -86,13 +86,13 @@ p
 
 
 #scene
-
 	overflow: hidden
 	width: 100%
 	.layer
 		width: 100%
 		img
 			position: relative
+			top: -30px
 			left: -10%
 			width: 120%
 	.move-always
@@ -180,14 +180,13 @@ p
 
 
 #skills
-	border-top: 10px solid  lighten($dark, 40%)
-	border-bottom: 10px solid  lighten($dark, 40%)
+	border-top: 10px solid  lighten($dark, 50%)
+	border-bottom: 10px solid  lighten($dark, 50%)
 	padding-top: 30px
 	padding-bottom: 30px
 	position: relative
-	left: -5%
-	width: 110%
-	box-shadow: 0 0 10px 10px  $dark inset
+	width: 100%
+	box-shadow: 0 5px 3px 0 $dark inset, 0 -5px 3px 0 $dark inset	
 	.item
 		text-align: center
 		img
@@ -229,14 +228,61 @@ form
 	color: #fff
 	width: 100%
 
+#aims
+	.col
+		padding: 0
+		&:nth-child(odd)
+			top: 80px
 
+	padding-bottom: 100px
+	&::before
+		position: relative
+		content: ' '
+		display: block
+		width: 100%
+		box-shadow: 0 0 10px 1px  $dark
+		z-index: 110
+	.wrapp-light
+		position: absolute
+		background-color: #fff
+		top: 0
+		left: 0
+		opacity: 0.6
+		width: 100%
+		height: 100%
+.aims-item
+	display: flex
+	flex-direction: column
+	align-items: center
+	padding: 10px
+	position: relative
+	.aims-descr 
+ 		color: $red
+ 		font-size: 20px
+ 		font-weight: bold
+ 		text-align: center
+	.aims-img
+		img
+			border: 5px solid $orange
+			width: 200px
+			height: 200px
+			border-radius: 50%
+		&::after
+			content: ' '
+			position: relative
+			display: block
+			width: 4px
+			height: 100px
+			background-color: $orange
+			left: 96px
 
 
 footer
 	@include linear-gradient(top, $dark 65%, $red 90%)
-	border-top: 5px solid $orange
+	border-top: 2px solid $orange
+	box-shadow: 0 0 10px 1px  $dark
 	hr
-		border-top: 5px solid $orange 
+		border-top: 2px solid $orange 
 		margin: 0
 		width: 100%
 	.name
@@ -252,7 +298,7 @@ footer
 		margin: 0
 		padding: 0
 		list-style: none
-		font-size: 35px
+		font-size: 30px
 		li 
 			display: inline
 			margin-left: 20px
@@ -262,5 +308,6 @@ footer
 		padding: 15px
 		color: #fff
 		margin-top: 20px
+		font-size: 10px
 		.col
 			text-align: center

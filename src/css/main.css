@@ -85,7 +85,7 @@ p {
     bottom: 30px; }
   #center .mn-is {
     position: relative;
-    bottom: 60px;
+    bottom: 50px;
     left: 650px;
     color: #8c0404;
     font-size: 30px;
@@ -97,7 +97,7 @@ p {
             box-shadow: 0 0 20px 1px #8c0404; }
   #center .name {
     position: relative;
-    bottom: 70px;
+    bottom: 60px;
     font-family: 'MavenPro', sans-serif;
     color: #ff5c05;
     font-size: 65px;
@@ -120,7 +120,7 @@ p {
         -ms-flex-item-align: center;
             align-self: center;
     position: relative;
-    bottom: 85px;
+    bottom: 75px;
     color: #fff;
     font-size: 20px;
     -webkit-box-shadow: 0 0 20px 1px #000000;
@@ -139,6 +139,7 @@ p {
     width: 100%; }
     #scene .layer img {
       position: relative;
+      top: -30px;
       left: -10%;
       width: 120%; }
   #scene .move-always {
@@ -269,15 +270,14 @@ p {
     width: 10%; } }
 
 #skills {
-  border-top: 10px solid #666666;
-  border-bottom: 10px solid #666666;
+  border-top: 10px solid gray;
+  border-bottom: 10px solid gray;
   padding-top: 30px;
   padding-bottom: 30px;
   position: relative;
-  left: -5%;
-  width: 110%;
-  -webkit-box-shadow: 0 0 10px 10px #000000 inset;
-          box-shadow: 0 0 10px 10px #000000 inset; }
+  width: 100%;
+  -webkit-box-shadow: 0 5px 3px 0 #000000 inset, 0 -5px 3px 0 #000000 inset;
+          box-shadow: 0 5px 3px 0 #000000 inset, 0 -5px 3px 0 #000000 inset; }
   #skills .item {
     text-align: center; }
     #skills .item img {
@@ -324,6 +324,65 @@ form {
   color: #fff;
   width: 100%; }
 
+#aims {
+  padding-bottom: 100px; }
+  #aims .col {
+    padding: 0; }
+    #aims .col:nth-child(odd) {
+      top: 80px; }
+  #aims::before {
+    position: relative;
+    content: ' ';
+    display: block;
+    width: 100%;
+    -webkit-box-shadow: 0 0 10px 1px #000000;
+            box-shadow: 0 0 10px 1px #000000;
+    z-index: 110; }
+  #aims .wrapp-light {
+    position: absolute;
+    background-color: #fff;
+    top: 0;
+    left: 0;
+    opacity: 0.6;
+    width: 100%;
+    height: 100%; }
+
+.aims-item {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px;
+  position: relative; }
+  .aims-item .aims-descr {
+    color: #8c0404;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center; }
+  .aims-item .aims-img img {
+    border: 5px solid #ff5c05;
+    width: 200px;
+    height: 200px;
+    -webkit-border-radius: 50%;
+            border-radius: 50%; }
+  .aims-item .aims-img::after {
+    content: ' ';
+    position: relative;
+    display: block;
+    width: 4px;
+    height: 100px;
+    background-color: #ff5c05;
+    left: 96px; }
+
 footer {
   background-color: #000000;
   background-image: -webkit-linear-gradient(top, #000000 65%, #8c0404 90%);
@@ -331,9 +390,11 @@ footer {
   background-image: -webkit-linear-gradient(top,#000000 65%, #8c0404 90%);
   background-image: -o-linear-gradient(top,#000000 65%, #8c0404 90%);
   background-image: linear-gradient(to bottom,#000000 65%, #8c0404 90%);
-  border-top: 5px solid #ff5c05; }
+  border-top: 2px solid #ff5c05;
+  -webkit-box-shadow: 0 0 10px 1px #000000;
+          box-shadow: 0 0 10px 1px #000000; }
   footer hr {
-    border-top: 5px solid #ff5c05;
+    border-top: 2px solid #ff5c05;
     margin: 0;
     width: 100%; }
   footer .name h2:first-child {
@@ -348,7 +409,7 @@ footer {
     margin: 0;
     padding: 0;
     list-style: none;
-    font-size: 35px; }
+    font-size: 30px; }
     footer .soc ul li {
       display: inline;
       margin-left: 20px; }
@@ -357,6 +418,7 @@ footer {
   footer .bottom {
     padding: 15px;
     color: #fff;
-    margin-top: 20px; }
+    margin-top: 20px;
+    font-size: 10px; }
     footer .bottom .col {
       text-align: center; }
