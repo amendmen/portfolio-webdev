@@ -15,14 +15,17 @@ $('.wrapp-bio').removeClass('bio-animate');
 	var parallax = new Parallax(scene);
 	
 	
-	$(window).scroll( function() {
+	$(document).scroll( function() {
 		$('#about').css({'background-positionY': -$(window).scrollTop()/5 + 'px'});
 		
 		if ($(window).scrollTop() > 400) {
 			$('.wrapp-bio').addClass('bio-animate');
-			
 		}
 
+		if ($(window).scrollTop() >= $('#aims').offset().top - 300){
+      $('.aims-item').addClass('item-animate');
+    }
+		
 	}).scroll();
 
 	$('#bio').typeIt({
@@ -30,9 +33,9 @@ $('.wrapp-bio').removeClass('bio-animate');
 		speed: 15
 	});
 
-	$( '.title' ).typeIt({
+	$( '.aims-descr' ).typeIt({
 		autoStart: false,
-		speed: 200,
+		speed: 50,
 		cursor: false
 	})
 
