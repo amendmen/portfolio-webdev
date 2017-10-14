@@ -1,8 +1,6 @@
 
-$orange: #ff5c05
-$blue: #2600ff
-$green: #61ff00
-$red: #8c0404
+$main1: #ff5c05
+$main2: #00ffe5
 $dark: #000000
 
 @import bourbon/bourbon
@@ -26,66 +24,66 @@ section
 p 
 	margin: 0
 
-.wrapper
+.main-page
+	z-index: 300
 	position: absolute
 	width: 100%
-	height: 100%
-	.container,
-	.row
-		height: 100%
-#center
+	bottom: 5%
+	.wrapp-main
+		display: flex
+		.main-line
+			width: 5px
+			height: auto
+			background-color: $main1
+			box-shadow: 0 0 1px $main1
+		.center-text
+			.question
+				font-size: 40px
+				color: $main2
+				text-shadow: 0 0 2px $main2, 0 0 10px $dark
+				line-height: 1
+			.main-descr
+				line-height: 1
+				letter-spacing: 7px	
+				text-shadow: 0 0 1px $dark
+.name
+	margin-top: 10px
+	margin-bottom: 10px
+	font-size: 50px
+	line-height: 1
+	font-family: 'MavenPro'
+	text-shadow: 0 0 1px $dark
+			
+.center-text,
+#btn-area
 	display: flex
 	flex-direction: column
 	align-items: baseline
-	z-index: 200
-	.hello
-		opacity: 0.8
-		background-color: $dark
-		z-index: 250
-		color: $green
-		font-weight: 800
-		text-transform: uppercase
-		font-size: 30px
-		padding: 0 20px
+	padding: 0 20px
+#btn-area
+	margin-top: 20px
+	width: 30%
+	height: 80px
+	padding: 0
+	flex-direction: row
+	justify-content: start
+	align-items: center
+	.btn-move 
 		position: relative
-		bottom: 30px
-	.mn-is
-		position: relative
-		bottom: 50px
-		left: 650px
-		color: $red
-		font-size: 30px
-		padding: 0 20px
-		border: 2px solid $red
-		z-index: 250
-		line-height: 1
-		box-shadow: 0 0 20px 1px $red
-	.name	
-		position: relative
-		bottom: 60px
-		font-family: 'MavenPro', sans-serif
-		color: $orange
-		font-size: 65px
-		font-weight: 900
-		padding: 0 20px
-		text-transform: uppercase
-		border: 4px solid #fff
-		transform: skew(-20deg)
-		box-shadow: 0 0 100px 1px $dark
-		div
-			transform: skew(20deg)
-	.center-descr
-		padding: 0 20px
-		align-self: center
-		position: relative
-		bottom: 75px
-		color: #fff
-		font-size: 20px
-		box-shadow: 0 0 20px 1px $dark
-		@include linear-gradient(left, lighten($dark, 25%) 1%,  $dark 10%, $dark 90%, lighten($dark, 25%) 100%)
+		width: auto
+		padding: 5px 40px
+		border-radius: 0
+		box-shadow: 0 0 2px $main1
+		&:hover
+			background-color: $main2
+			box-shadow: 0 0 2px $main2, 0 0 10px $dark
+			color: $dark
+	.btn-moving
+		padding: 5px 25px
+		border-radius: 10px
 
-
-#scene
+#scene,
+#scenefooter
 	overflow: hidden
 	width: 100%
 	.layer
@@ -95,19 +93,12 @@ p
 			top: -30px
 			left: -10%
 			width: 120%
-	.move-always
-		animation: moving-fog 15s infinite alternate
-@keyframes moving-fog
-	0%
-		transform: translate(30%)
-	100%
-		transform: translate(-110%)
 
 .title
 	margin-top: 50px
 	margin-bottom: 50px
 	text-align: center
-	color: $red
+	color: $dark
 	h2, h6
 		text-transform: uppercase
 
@@ -119,8 +110,6 @@ p
 		padding: 0
 	img
 		width: 100%
-		@include linear-gradient(left, $orange, lighten($orange, 30%), $orange)
-		border-radius: 20px	
 	.work-descr		
 		text-align: center
 
@@ -141,7 +130,7 @@ p
 
 .wrapp-bio
 	position: absolute
-	background-color: $orange
+	background-color: $main1
 	top: -100%
 	left: 0
 	opacity: 0.6
@@ -174,13 +163,14 @@ p
 
 
 #skills
-	border-top: 10px solid  lighten($dark, 50%)
-	border-bottom: 10px solid  lighten($dark, 50%)
+	border-top: 2px solid $main1
+	border-bottom: 2px solid $main1
 	padding-top: 30px
 	padding-bottom: 30px
 	position: relative
 	width: 100%
-	box-shadow: 0 5px 3px 0 $dark inset, 0 -5px 3px 0 $dark inset	
+	
+	//box-shadow: 0 5px 3px 0 $dark inset, 0 -5px 3px 0 $dark inset	
 	.item
 		text-align: center
 		img
@@ -205,7 +195,7 @@ p
 		left: 0
 		top: 0
 		display: block
-		background-color: $blue
+		background-color: $main2
 		opacity: 0.1
 		box-shadow: 0 0 10px 1px $dark
 		z-index: 100
@@ -216,9 +206,9 @@ form
 	z-index: 200
 	position: relative
 	label
-		color: $orange
+		color: $main1
 .btn 
-	background-color: $orange
+	background-color: $main1
 	color: #fff
 	width: 100%
 
@@ -250,66 +240,44 @@ form
 	padding: 10px
 	position: relative
 	.aims-descr 
- 		color: $red
+ 		color: $dark
  		font-size: 20px
  		font-weight: bold
  		text-align: center
 	.aims-img
 		img
-			border: 5px solid $orange
+			border: 5px solid $main1
 			width: 200px
 			height: 200px
 			border-radius: 50%
-		&::after
-			content: ' '
-			position: relative
-			display: block
-			width: 4px
-			height: 0
-			background-color: $orange
-			left: 96px
 		
 .item-animate
 	.aims-img
 		img
 			transform: rotate(360deg)
 			transition: all, 2s
-		&::after
-			height: 100px
-			transition: 1s
+	
 
-
-footer
-	@include linear-gradient(top, $dark 65%, $red 90%)
-	border-top: 2px solid $orange
-	box-shadow: 0 0 10px 1px  $dark
-	hr
-		border-top: 2px solid $orange 
-		margin: 0
+#footer
+	overflow: hidden
+	.footer-inner
+		position: relative
 		width: 100%
+		.container
+			z-index: 300
 	.name
-		h2:first-child
-			font-weight: 200
-		h2:last-child
-			font-weight: 600
-	h2
-		color: #fff
-		float: left
-		margin: 0
+		font-size: 40px
 	.soc ul
 		margin: 0
 		padding: 0
 		list-style: none
-		font-size: 30px
+		font-size: 40px
 		li 
 			display: inline
 			margin-left: 20px
 			a
-				color: $orange
-	.bottom
-		padding: 15px
-		color: #fff
-		margin-top: 20px
-		font-size: 10px
-		.col
-			text-align: center
+				color: $dark
+#scenefooter
+	position: absolute
+	z-index: 0
+
