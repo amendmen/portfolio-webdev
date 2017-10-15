@@ -24,6 +24,81 @@ section
 p 
 	margin: 0
 
+#my-header
+	position: fixed
+	top: 30px
+	right: 80px
+	z-index: 9999
+#nav-container
+	position: relative
+	right: 1px
+	margin: -3em
+	z-index: 9999
+	display: inline-block
+/*toggle-icon*/
+.toggle-icon 
+	display: block
+	position: relative
+	width: 100%
+	margin: -2.2em auto 0 0.2em
+	transition: margin 600ms
+	cursor: pointer
+
+.toggle-icon .bar 
+	display: block
+	width: 40px
+	height: 2px
+	margin: 0.9em
+	background-color: #FFF
+	box-sizing: border-box
+	transition-property: transform, margin, border-right-color, box-shadow
+	transition-duration: 600ms
+	box-shadow: 0 0 1px 1px $dark
+
+	.toggle-icon .bar:nth-of-type(1) 
+		transition: opacity 300ms
+	
+	.toggle-icon .bar:nth-of-type(2) 
+		transform: rotate(-180deg)
+	
+/*pushed*/
+.pushed .toggle-icon 
+	margin: -3.2em 0 0 0.7em
+
+.pushed .bar:nth-of-type(1) 
+	opacity: 0
+
+
+.pushed .bar:nth-of-type(2) 
+	margin-left: 1.4em
+	transform: rotate(-137deg) translateY(-1.5em)
+
+
+.pushed .bar:nth-of-type(3) 
+	margin-left: 0.5em
+	transform: rotate(-42deg)
+	
+	
+.pushed .toggle-icon:hover .bar:nth-of-type(2)
+	background-color: $main1 
+	border-right-color: $main1
+	box-shadow: 0.4em 0 0.6em 0.1em rgba(205,40,44,0.75)
+
+.pushed .toggle-icon:hover .bar:nth-of-type(3) 
+	background-color: $main2
+	border-right-color: $main2
+	box-shadow: 0.4em 0 0.6em 0.1em rgba(83,228,68,0.65)
+
+
+
+
+
+
+
+
+#my-content
+	position: relative
+
 .main-page
 	z-index: 300
 	position: absolute

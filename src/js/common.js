@@ -1,5 +1,45 @@
 $(document).ready( function() { 
 
+
+
+$("#menu").mmenu({
+		"slidingSubmenus": false,
+		"extensions": [
+			"fx-panels-zoom"
+		],
+
+		"offCanvas": {
+			"position": "right"
+		},
+
+	}, {
+		classNames: {
+			fixedElements: {
+				fixed: "fix",
+				sticky: "stick"
+			}
+		}
+	});
+
+	var api = $("#menu").data( "mmenu" );
+
+	$("#nav-container").click(function() {
+         api.close();
+      });
+
+	api.bind("open:finish", function($panel) {
+		$('#nav-container').addClass('pushed');
+	});
+	api.bind("close:finish", function($panel) {
+		$('#nav-container').removeClass('pushed')
+	});
+
+	
+
+
+
+
+
 $('.wrapp-bio').removeClass('bio-animate');
 
 	function winHeight() {
