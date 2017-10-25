@@ -28,7 +28,7 @@ gulp.task('icons', function() {
         .pipe(gulp.dest('src/fonts/'));
 });
 
-gulp.task('scripts', ['bootstrap'],  function() {
+gulp.task('scripts', function() {
 	return gulp.src([
 			'src/libs/jquery/dist/jquery.min.js',
 			'src/libs/jquery.mmenu/jquery.mmenu.all.js',
@@ -48,15 +48,6 @@ gulp.task('scripts', ['bootstrap'],  function() {
 	.pipe(browserSync.reload({stream: true}));
 });
 
-gulp.task('bootstrap', function() {
-	return gulp.src([
-		'src/libs/popper/dist/popper.js',
-		'src/libs/bootstrap/dist/js/bootstrap.js'		
-		])
-	.pipe(plumber())
-	.pipe(babel({ presets: ['es2015'] }))
-	.pipe(gulp.dest('src/libs/bootstrap/es5/'))
-})
 
 gulp.task('css-libs', ['sass', 'icons'], function() {
 	return gulp.src('src/css/libs.css')

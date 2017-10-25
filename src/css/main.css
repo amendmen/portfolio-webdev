@@ -28,6 +28,24 @@
   font-weight: black;
   src: url("/fonts/MavenPro/MavenPro-Black.ttf") format("truetype"); }
 
+@font-face {
+  font-family: "Orbitron";
+  font-style: normal;
+  font-weight: regular;
+  src: url("/fonts/Orbitron/Orbitron-Regular.ttf") format("truetype"); }
+
+@font-face {
+  font-family: "Orbitron";
+  font-style: normal;
+  font-weight: bold;
+  src: url("/fonts/Orbitron/Orbitron-Bold.ttf") format("truetype"); }
+
+@font-face {
+  font-family: "Orbitron";
+  font-style: normal;
+  font-weight: medium;
+  src: url("/fonts/Orbitron/Orbitron-Medium.ttf") format("truetype"); }
+
 body {
   margin: 0;
   padding: 0;
@@ -130,6 +148,47 @@ p {
   border-right-color: #00ffe5;
   -webkit-box-shadow: 0.4em 0 0.6em 0.1em rgba(83, 228, 68, 0.65);
           box-shadow: 0.4em 0 0.6em 0.1em rgba(83, 228, 68, 0.65); }
+
+.mm-listview > li:not(.mm-divider):after {
+  display: none; }
+
+.mm-panels {
+  background-color: #FFF;
+  border-left: 3px solid #ff5c05; }
+  .mm-panels li.hover::before {
+    left: 0;
+    -webkit-transition: all, 0.4s;
+    -o-transition: all, 0.4s;
+    transition: all, 0.4s; }
+  .mm-panels li::before {
+    position: absolute;
+    content: ' ';
+    display: block;
+    width: 120%;
+    height: 100%;
+    background-color: #000000;
+    -webkit-border-radius: 0 30% 0 0;
+            border-radius: 0 30% 0 0;
+    left: -120%; }
+  .mm-panels li a {
+    text-transform: capitalize;
+    font-size: 50px;
+    font-family: 'Orbitron', sans-serif;
+    padding: 30px 10px 30px 10px;
+    margin-top: 10px;
+    font-weight: 500;
+    z-index: 3000;
+    color: #00ffe5;
+    text-shadow: 0 0 2px #00ffe5, 0 0 10px #000000;
+    position: relative; }
+    .mm-panels li a:hover {
+      letter-spacing: 8px;
+      color: #fff;
+      -webkit-transition: all, 0.3s;
+      -o-transition: all, 0.3s;
+      transition: all, 0.3s; }
+  .mm-panels li .mm-next {
+    display: none; }
 
 #my-content {
   position: relative; }
@@ -449,6 +508,12 @@ form {
       margin-left: 20px; }
       #footer .soc ul li a {
         color: #000000; }
+  #footer .footer-list {
+    list-style: none;
+    padding: 0; }
+    #footer .footer-list li a {
+      color: #000000;
+      font-weight: bold; }
 
 #scenefooter {
   position: absolute;

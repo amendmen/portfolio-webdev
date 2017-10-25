@@ -89,10 +89,46 @@ p
 	border-right-color: $main2
 	box-shadow: 0.4em 0 0.6em 0.1em rgba(83,228,68,0.65)
 
+.mm-listview>li:not(.mm-divider):after
+	display: none
 
-
-
-
+.mm-panels
+	background-color: #FFF
+	border-left: 3px solid $main1
+	li.hover
+		&::before
+			left: 0
+			transition: all, 0.4s
+	li
+		&::before
+			position: absolute
+			content: ' '
+			display: block
+			width: 120%
+			height: 100%
+			background-color: $dark 
+			border-radius: 0 30% 0 0
+			left: -120%
+		a 
+			text-transform: capitalize
+			font-size: 50px
+			font-family: 'Orbitron', sans-serif
+			padding: 30px 10px 30px 10px
+			margin-top: 10px
+			font-weight: 500
+			z-index: 3000
+			color: $main2 
+			text-shadow: 0 0 2px $main2, 0 0 10px $dark
+			position: relative
+			&:hover
+				letter-spacing: 8px
+				color: #fff				
+				transition: all, 0.3s
+		.mm-next
+			display: none
+	.mm-selected
+		
+		
 
 
 
@@ -352,6 +388,13 @@ form
 			margin-left: 20px
 			a
 				color: $dark
+	.footer-list
+		list-style: none
+		padding: 0
+		li
+			a
+				color: $dark
+				font-weight: bold
 #scenefooter
 	position: absolute
 	z-index: 0

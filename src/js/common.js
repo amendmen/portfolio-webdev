@@ -5,7 +5,8 @@ $(document).ready( function() {
 $("#menu").mmenu({
 		"slidingSubmenus": false,
 		"extensions": [
-			"fx-panels-zoom"
+			"fx-panels-zoom",
+			"listview-huge"
 		],
 
 		"offCanvas": {
@@ -34,13 +35,15 @@ $("#menu").mmenu({
 		$('#nav-container').removeClass('pushed')
 	});
 
-	
+	$('.mm-panels li').hover(
+		function(){
+			$(this).addClass('hover')
+		},
+		function(){
+			$(this).removeClass('hover')
+		})
 
 
-
-
-
-$('.wrapp-bio').removeClass('bio-animate');
 
 	function winHeight() {
 		$( '#scene' ).css("height", $( window ).height());
@@ -78,6 +81,14 @@ $('.wrapp-bio').removeClass('bio-animate');
 	var scenefooter = document.getElementById('scenefooter');
 	var parallax = new Parallax(scenefooter);
 	
+	$("#menu").on("click","a", function (event) {
+		event.preventDefault();
+		var id  = $(this).attr('href'),
+				top = $(id).offset().top;
+		$('body,html').animate({scrollTop: top}, 1500);
+	});
+
+
 	var div = document.querySelectorAll('#works .row>div:first-child');
 	for (var i = 0; i < div.length; i = i + 2) {
 			 div[i].classList.add('order-2');
