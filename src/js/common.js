@@ -1,6 +1,17 @@
 $(document).ready( function() { 
 
-
+$(function () {
+	$('.popup-modal').magnificPopup({
+		type: 'inline',
+		preloader: false,
+		focus: '#username',
+		modal: true
+	});
+	$(document).on('click', '.popup-modal-dismiss', function (e) {
+		e.preventDefault();
+		$.magnificPopup.close();
+	});
+});
 
 $("#menu").mmenu({
 		"slidingSubmenus": false,
@@ -44,7 +55,6 @@ $("#menu").mmenu({
 		})
 
 
-
 	function winHeight() {
 		$( '#scene' ).css("height", $( window ).height());
 	}
@@ -58,8 +68,8 @@ $("#menu").mmenu({
 		function() {
 			$('.btn-move').addClass('btn-moving');
 			$(this).mousemove(function(e) {
-				var coordx = e.pageX - $('#btn-area').offset().left - $('.btn-move').outerWidth()/2;
-				var coordy = e.pageY - $('#btn-area').offset().top - $('.btn-move').outerHeight()*1.5;
+				var coordx = e.pageX - $(this).offset().left - $('.btn-move').outerWidth()/2;
+				var coordy = e.pageY - $(this).offset().top - $('.btn-move').outerHeight()*1.5;
 				$('.btn-move').css({
 					'left': coordx + 'px',
 					'top': coordy + 'px'

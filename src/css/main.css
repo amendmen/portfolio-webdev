@@ -323,7 +323,7 @@ p {
   text-shadow: 1px 1px red;
   color: #fff;
   margin-bottom: 50px;
-  font-family: 'MavenPro', sans-serif; }
+  font-family: 'Orbitron', sans-serif; }
 
 .wrapp-bio {
   position: absolute;
@@ -388,7 +388,7 @@ p {
     text-align: center; }
     #skills .item img {
       width: auto;
-      max-height: 80px; }
+      max-height: 60px; }
 
 .map {
   position: absolute;

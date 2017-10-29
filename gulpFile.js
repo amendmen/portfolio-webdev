@@ -34,10 +34,8 @@ gulp.task('scripts', function() {
 			'src/libs/jquery.mmenu/jquery.mmenu.all.js',
 			'src/libs/parallax/parallax.min.js',
 			'src/libs/typeit/dist/typeit.min.js',
-			'src/libs/jquery-validation/dist/jquery.validate.min.js'	
-			/*'src/libs/bootstrap/es5/popper.js',
-			'src/libs/bootstrap/es5/bootstrap.js'
-			*/
+			'src/libs/magnific-popup/dist/jquery.magnific-popup.min.js'	
+			
 		
 		])
 	.pipe(plumber())
