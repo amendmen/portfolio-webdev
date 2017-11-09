@@ -1,6 +1,6 @@
-var gulp 		 = require('gulp'),
-	babel   	 = require('gulp-babel'),
-	sass 		 = require('gulp-sass'),
+var gulp 			 = require('gulp'),
+	babel   		 = require('gulp-babel'),
+	sass 				 = require('gulp-sass'),
 	plumber      = require('gulp-plumber'),
 	browserSync  = require('browser-sync'),
 	concat       = require('gulp-concat'),
@@ -8,9 +8,9 @@ var gulp 		 = require('gulp'),
 	cssnano      = require('gulp-cssnano'),
 	rename       = require('gulp-rename'),
 	del          = require('del'),
-	imagemin	 = require('gulp-imagemin'),
-	pngquant	 = require('imagemin-pngquant'),
-	cache		 = require('gulp-cache'),
+	imagemin		 = require('gulp-imagemin'),
+	pngquant		 = require('imagemin-pngquant'),
+	cache				 = require('gulp-cache'),
 	autoprefixer = require('gulp-autoprefixer');
 
 
@@ -31,10 +31,12 @@ gulp.task('icons', function() {
 gulp.task('scripts', function() {
 	return gulp.src([
 			'src/libs/jquery/dist/jquery.min.js',
+			'src/libs/jquery-validation/dist/jquery.validate.min.js',
 			'src/libs/jquery.mmenu/jquery.mmenu.all.js',
 			'src/libs/parallax/parallax.min.js',
 			'src/libs/typeit/dist/typeit.min.js',
-			'src/libs/magnific-popup/dist/jquery.magnific-popup.min.js'	
+			'src/libs/tether/dist/js/tether.min.js',
+			'src/libs/bootstrap/dist/js/bootstrap.min.js'	
 			
 		
 		])

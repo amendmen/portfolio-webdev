@@ -1,17 +1,22 @@
 $(document).ready( function() { 
 
-$(function () {
-	$('.popup-modal').magnificPopup({
-		type: 'inline',
-		preloader: false,
-		focus: '#username',
-		modal: true
-	});
-	$(document).on('click', '.popup-modal-dismiss', function (e) {
-		e.preventDefault();
-		$.magnificPopup.close();
-	});
+
+
+$('#sayhi').modal({
+	backdrop: false,
+	show: false
+})
+$('#sayhi').on('show.bs.modal', function (e) {
+  $('.toggle-icon').addClass('hidden')
+})
+$('#sayhi').on('hide.bs.modal', function (e) {
+  $('.toggle-icon').removeClass('hidden')
+})
+
+$("#myform").validate({
+  debug: true
 });
+
 
 $("#menu").mmenu({
 		"slidingSubmenus": false,
@@ -68,8 +73,8 @@ $("#menu").mmenu({
 		function() {
 			$('.btn-move').addClass('btn-moving');
 			$(this).mousemove(function(e) {
-				var coordx = e.pageX - $(this).offset().left - $('.btn-move').outerWidth()/2;
-				var coordy = e.pageY - $(this).offset().top - $('.btn-move').outerHeight()*1.5;
+				var coordx = e.pageX - $(this).offset().left - $('.btn-move').outerWidth()/3;
+				var coordy = e.pageY - $(this).offset().top - $('.btn-move').outerHeight();
 				$('.btn-move').css({
 					'left': coordx + 'px',
 					'top': coordy + 'px'
@@ -99,10 +104,7 @@ $("#menu").mmenu({
 	});
 
 
-	var div = document.querySelectorAll('#works .row>div:first-child');
-	for (var i = 0; i < div.length; i = i + 2) {
-			 div[i].classList.add('order-2');
-	}
+
 	
 	$(document).scroll( function() {
 		$('#about').css({'background-positionY': -$(window).scrollTop()/5 + 'px'});
