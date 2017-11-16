@@ -1,20 +1,23 @@
 $(document).ready( function() { 
 
 
-
 $('#sayhi').modal({
 	backdrop: false,
 	show: false
 })
 $('#sayhi').on('show.bs.modal', function (e) {
-  $('.toggle-icon').addClass('hidden')
+  $('.toggle-icon').addClass('hidden');
+   $('.btn-move').addClass('hidden');
+  $('.main-page').addClass('mini')
 })
 $('#sayhi').on('hide.bs.modal', function (e) {
-  $('.toggle-icon').removeClass('hidden')
+  $('.toggle-icon').removeClass('hidden');
+  $('.btn-move').removeClass('hidden');
+  $('.main-page').removeClass('mini')
 })
 
 $("#myform").validate({
-  debug: true
+  debug: false
 });
 
 
@@ -22,7 +25,8 @@ $("#menu").mmenu({
 		"slidingSubmenus": false,
 		"extensions": [
 			"fx-panels-zoom",
-			"listview-huge"
+			"listview-huge",
+			"pagedim-black"
 		],
 
 		"offCanvas": {
@@ -58,6 +62,20 @@ $("#menu").mmenu({
 		function(){
 			$(this).removeClass('hover')
 		})
+
+
+
+
+  $('.owl-carousel').owlCarousel({
+   	center:true,
+    loop:true,
+    autoWidth:true,
+    autoplay: true,
+    items:4,
+    margin:50,
+    smartSpeed:500,
+})
+
 
 
 	function winHeight() {

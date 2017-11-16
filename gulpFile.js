@@ -34,6 +34,7 @@ gulp.task('scripts', function() {
 			'src/libs/jquery-validation/dist/jquery.validate.min.js',
 			'src/libs/jquery.mmenu/jquery.mmenu.all.js',
 			'src/libs/parallax/parallax.min.js',
+			'src/libs/owl.carousel/dist/owl.carousel.min.js',
 			'src/libs/typeit/dist/typeit.min.js',
 			'src/libs/tether/dist/js/tether.min.js',
 			'src/libs/bootstrap/dist/js/bootstrap.min.js'	

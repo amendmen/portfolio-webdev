@@ -23,6 +23,10 @@ h1, h2, h3, h4
 section
 	position: relative
 	overflow: hidden
+	padding-top: 30px
+	padding-bottom: 30px
+#top-page
+	padding: 0
 p 
 	margin: 0
 
@@ -151,16 +155,15 @@ p
 			height: auto
 			background-color: $main1
 			box-shadow: 0 0 1px $main1
-		.center-text
-			.question
-				font-size: 40px
-				color: $main2
-				text-shadow: 0 0 2px $main2, 0 0 10px $dark
-				line-height: 1
-			.main-descr
-				line-height: 1
-				letter-spacing: 7px	
-				text-shadow: 0 0 1px $dark
+.question
+	font-size: 40px
+	color: $main2
+	text-shadow: 0 0 2px $main2, 0 0 10px $dark
+	line-height: 1
+.main-descr
+	line-height: 1
+	letter-spacing: 7px	
+	text-shadow: 0 0 1px $dark
 .name
 	margin-top: 10px
 	margin-bottom: 10px
@@ -197,6 +200,61 @@ p
 		padding: 5px 25px
 		border-radius: 10px
 
+#my-page .modal-dialog
+	z-index: 2000
+	position: absolute
+	width: 500px
+	top: 50%
+	left: 50%
+	margin: 0
+	transform: translate(-50%, -50%)
+.modal-content
+	font-family: 'Orbitron', sans-serif
+	box-shadow: 0 0 0 3000px rgba(0,0,0,0.3)
+	border: none
+	background-color: transparent
+	border-radius: 10px
+	overflow: hidden
+	&:before
+		content: ' '
+		display: block
+		position: absolute
+		width: 100%
+		height: 100%
+		@include linear-gradient(115deg, #fff 0%, #fff 50%, $dark)
+		opacity: 0.8
+	.btn 
+		width: auto
+		background-color: transparent
+		font-size: 16px
+		font-weight: bold
+		color: black
+	.modal-header
+		position: relative
+	.form-control
+		background-color: transparent
+		border: none
+		text-align: center
+		&:focus
+			border-bottom: 3px solid $main2
+		@include placeholder
+			color: $main1
+			text-align: center
+			font-size: 16px
+	.btn label,
+	form label	
+		color: red		
+.mini.main-page
+	.question
+		font-size: 15px
+		transition: all,	0.5s
+	.name
+		font-size: 25px
+		transition: all,	0.5s
+	.main-descr
+		font-size: 5px
+		transition: all,	0.5s
+	
 #scene,
 #scenefooter
 	overflow: hidden
@@ -210,26 +268,68 @@ p
 			width: 120%
 
 .title
-	margin-top: 50px
-	margin-bottom: 50px
-	text-align: center
+	text-align: left
+	padding-left: 20px
+	padding-right: 30px
+	padding-top: 3px
 	color: $dark
-	h2, h6
+	margin-bottom: 30px
+	span
+		font-weight: bold
+		color: $main2
+	h1, h6
 		text-transform: uppercase
+		line-height: 1
+		margin: 0		
+	h1
+		font-weight: 600
+	h6
+		color: $main1
+	
+	
 
 #works
-	padding-top: 30px
-	.row
-		margin-bottom: 50px
-	.col
-		padding: 0
-	img
-		width: 100%
-	.work-descr		
-		text-align: center
-	.btn
+	.device
+		width: auto
+		position: relative
+		img
+			position: relative
+			z-index: 100
+			width: 100%
+	.screen
+		position: absolute
+		overflow: hidden
+		background-size: cover
+		background-position: 0% 0%
+	.lg-screen
+		left: 3.5%
+		top: 4%
+		width: 94%
+		height: 66%
+	.md-screen
+		left: 18%
+		top: 6%
+		width: 65%
+		height: 83%
+	.sm-screen
+		left: 11%
+		top: 10%
+		width: 79%
+		height: 81%
+	.screen-animate
+		animation: live 7s linear infinite alternate
 
-
+@keyframes live
+	0%
+		background-position: 0% 0%
+	10%
+		background-position: 0% 0%
+	50%
+		background-position: 0% 50%
+	90%
+		background-position: 0% 100%
+	100%
+		background-position: 0% 100%
 
 #about
 	.bio,
@@ -277,16 +377,16 @@ p
 		transform: translate(-50%) rotate(20deg)
 
 
-#skills
+#used
 	border-top: 2px solid $main1
-	border-bottom: 2px solid $main1
 	padding-top: 30px
 	padding-bottom: 30px
 	position: relative
 	width: 100%
-	//box-shadow: 0 5px 3px 0 $dark inset, 0 -5px 3px 0 $dark inset	
 	.item
-		text-align: center
+		height: 60px
+		display: flex
+		align-items: center
 		img
 			width: auto
 			max-height: 60px
