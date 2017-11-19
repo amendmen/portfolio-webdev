@@ -268,10 +268,9 @@ p
 			width: 120%
 
 .title
-	text-align: left
-	padding-left: 20px
-	padding-right: 30px
-	padding-top: 3px
+	width: fit-content
+	margin-right: auto
+	margin-left: auto
 	color: $dark
 	margin-bottom: 30px
 	span
@@ -292,6 +291,8 @@ p
 	.device
 		width: auto
 		position: relative
+		margin-right: auto
+		margin-left: auto
 		img
 			position: relative
 			z-index: 100
@@ -308,14 +309,19 @@ p
 		height: 66%
 	.md-screen
 		left: 18%
-		top: 6%
+		top: 26%
 		width: 65%
-		height: 83%
+		height: 46%
 	.sm-screen
 		left: 11%
-		top: 10%
+		top: 28%
 		width: 79%
-		height: 81%
+		height: 45%
+	.xs-screen
+		left: 10%
+		top: 15%
+		width: 83%
+		height: 70%
 	.screen-animate
 		animation: live 7s linear infinite alternate
 
@@ -330,6 +336,30 @@ p
 		background-position: 0% 100%
 	100%
 		background-position: 0% 100%
+#works
+	h2,
+	li 
+		font-family: 'Orbitron', sans-serif
+	p 
+		font-size: 16px
+		margin-top: 5px
+	ul
+		list-style: none
+		text-align: left
+		width: fit-content
+		padding-left: 0
+		li 
+			color: $main1
+			margin-top: 3px
+			text-transform: uppercase
+			padding: 3px 5px			
+			letter-spacing: 2px
+	.flex-row-reverse .work-about
+		text-align: right
+		ul
+			margin-left: auto
+			li 
+				text-align: right
 
 #about
 	.bio,
@@ -378,7 +408,6 @@ p
 
 
 #used
-	border-top: 2px solid $main1
 	padding-top: 30px
 	padding-bottom: 30px
 	position: relative

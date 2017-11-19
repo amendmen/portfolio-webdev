@@ -64,8 +64,20 @@ $("#menu").mmenu({
 		})
 
 
+$('.carousel').carousel({
+	interval: 7000,
+})
+
+////////
 
 
+var row = document.querySelectorAll('#works>.container .row:nth-child(even)');
+ for (var i = 0; i < row.length; i++) {
+ 			row[i].classList.add('flex-row-reverse');
+ 	}
+
+
+/////////////////
   $('.owl-carousel').owlCarousel({
    	center:true,
     loop:true,
